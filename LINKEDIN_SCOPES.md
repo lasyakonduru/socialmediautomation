@@ -29,13 +29,13 @@ The application requests the following LinkedIn OAuth scopes:
 **File:** `app/settings/page.tsx`  
 **Line:** 542
 
-The settings page shows a simplified list of required scopes:
+The settings page displays the complete list of required scopes:
 
 ```typescript
-<p className="mt-3 text-blue-700"><strong>Required scopes:</strong> openid, profile, email, w_member_social</p>
+<p className="mt-3 text-blue-700"><strong>Required scopes:</strong> openid, profile, email, w_member_social, r_organization_admin, w_organization_social</p>
 ```
 
-Note: This documentation shows the basic scopes but doesn't include the organization scopes (`r_organization_admin`, `w_organization_social`).
+This includes a note explaining that organization scopes enable Company Page posting and that the app falls back to personal profile posting if these scopes are not approved.
 
 ## OAuth Flow Files
 

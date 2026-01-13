@@ -539,7 +539,8 @@ export default function SettingsPage() {
                       <li>Under &quot;Products&quot;, request access to &quot;Share on LinkedIn&quot; and &quot;Sign In with LinkedIn using OpenID Connect&quot;</li>
                       <li>Wait for product approval (usually instant for basic permissions)</li>
                     </ol>
-                    <p className="mt-3 text-blue-700"><strong>Required scopes:</strong> openid, profile, email, w_member_social</p>
+                    <p className="mt-3 text-blue-700"><strong>Required scopes:</strong> openid, profile, email, w_member_social, r_organization_admin, w_organization_social</p>
+                    <p className="mt-1 text-sm text-gray-600">Note: Organization scopes (r_organization_admin, w_organization_social) enable posting to LinkedIn Company Pages. If not approved, the app will fall back to personal profile posting.</p>
                   </div>
                 )}
                 
