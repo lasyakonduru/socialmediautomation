@@ -59,7 +59,7 @@ This includes a note explaining that organization scopes enable Company Page pos
 LinkedIn credentials are configured through environment variables:
 
 **File:** `.env.example`  
-**Lines:** 23-25
+**Lines:** 24-25
 
 ```
 # LinkedIn
@@ -76,7 +76,9 @@ The application includes support for LinkedIn Company Pages (organizations):
 - This functionality requires the `r_organization_admin` and `w_organization_social` scopes
 - If these scopes are not approved by LinkedIn, the application falls back to personal profile connection
 
-See `app/api/auth/callback/linkedin/route.ts` lines 13-61 for organization fetching logic.
+Organization fetching and fallback logic is implemented in `app/api/auth/callback/linkedin/route.ts`:
+- `fetchLinkedInOrganizations()` function: lines 13-61
+- Organization selection logic: lines 153-212
 
 ## Summary
 
